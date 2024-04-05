@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner_home{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(223, 147, 132, 0.75), rgba(249, 133, 55, 0.75), rgba(223, 147, 132, 0.75));
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.banner_about_us{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(223, 147, 132, 0.75), rgba(249, 133, 55, 0.75), rgba(223, 147, 132, 0.75)), url(background2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.banner_intro{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(223, 147, 132, 0.75), rgba(249, 133, 55, 0.75), rgba(223, 147, 132, 0.75));
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.banner_contact{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(223, 147, 132, 0.75), rgba(249, 133, 55, 0.75), rgba(223, 147, 132, 0.75));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+
+.navbar{
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    align-items:end;
+    justify-content: space-between;
+}
+.backgroundimg
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 75%;
+}
+.logo{
+    width: 225px;
+    top: -50px;
+    left: 20px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 60%;
+}
+.navbar ul{
+    margin-left: auto;
+    margin-top: -5%;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: #d96817;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content_home{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content_home h1{
+    font-family: serif;
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content_home p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.content_home button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #ef6401;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.content_home span{
+    background: #ec8d3a;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.content_home button:hover span{
+    width: 100%;
+}
+
+.content_home button:hover{
+    border: none;
+}
+
+.content_intro{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.team-slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    align-items: center; /* Center the content vertically */
+}
+
+.team-card {
+    flex: 0 0 auto; /* Allow cards to take their natural width */
+    min-width: 100%; /* Set minimum width of each card */
+    transition: transform 0.5s ease; /* Smooth sliding transition */
+    text-align: center; /* Center the content inside each card */
+}
+
+.team-card h2 {
+    font-size: 50px; /* Example font size, adjust as needed */
+}
+
+.team-card p {
+    font-size: 25px;
+    margin: 20px auto; /* Center paragraph horizontally */
+    font-weight: 100;
+    text-align: center;
+    justify-content: center;
+}
+
+.active {
+    transform: translateX(0); /* Initial position */
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons .button1 button{
+    width: 100px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fc7412;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.buttons .button1 button span{
+    background: #ec8d3a;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.buttons .button1 button:hover span{
+    width: 100%;
+}
+
+.buttons .button1 button:hover{
+    border: none;
+}
+
+.buttons .button2 button{
+    width: 100px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fc7412;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.buttons .button2 button span{
+    background: #ec8d3a;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.buttons .button2 button:hover span{
+    width: 100%;
+}
+
+.buttons .button2 button:hover{
+    border: none;
+}
+
+.loading{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading .line_box{
+    padding: 2px;
+    width: 40%;
+    height: 20px;
+    border: 2px solid #ff9d00;
+    border-radius: 20px;
+}
+
+.loading .line_box .line{
+    height: 20px;
+    border-radius: 20px;
+    background: #ff9d00;
+    animation: loading 5s infinite cubic-bezier(0, 0, 0, 0);
+}
+
+.loading.finished .line {
+    animation-play-state: paused; /* Pause the animation when finished */
+}
+
+@keyframes loading{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.content_about_us {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+.content_about_us h1{
+    font-family: serif;
+    font-size: 30px;
+    justify-content: center;
+}
+.content_about_us p{
+    margin: 20px auto;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 100;
+    text-align: justify;
+    max-width: 60%;
+}
+
+.content_contact{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.contact_box{
+    background: #ffffff;
+    display: flex;
+}
+
+.contact_left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.contact_right{
+    color: #fff;
+    flex-basis: 40%;
+    padding: 40px;
+    background: #ff9d00;
+}
+
+.contact_right table{
+    color: #fff;
+}
+.content_contact h1{
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+.content_contact p{
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 30px;
+}
+.contact_left h3{
+    color: #ff9d00;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.input_row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input_group{
+    flex-basis: 45%;
+}
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+label{
+    margin-bottom: 6px;
+    display: block;
+    color: #ff9d00;
+}
+
+.contact_left button{
+    background: #ff9d00;
+    width: 17%;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 40px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+
+.contact_right h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+}
