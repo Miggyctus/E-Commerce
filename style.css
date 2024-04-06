@@ -165,7 +165,7 @@
 }
 
 .team-member-image{
-    width: 250px; 
+    width: 250px;
     box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
 }
 .team-slider {
@@ -198,7 +198,12 @@
     font-style: normal;
     margin-bottom: 10px;
 }
-
+.team-card h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 10px;
+}
 .team-card p {
     font-size: 20px;
     line-height: 1.5;
