@@ -1,21 +1,21 @@
 var slideIndex = 0;
 
-//var intervalID = setInterval(nextSlide, 5000);
+var intervalID = setInterval(nextSlide, 5000);
 
 function nextSlide() {
   resetLoadingBar();
-  //clearInterval(intervalID);
+  clearInterval(intervalID);
   slideIndex++;
   showSlide(slideIndex);
-  //intervalID = setInterval(nextSlide, 5000);
+  intervalID = setInterval(nextSlide, 5000);
 }
 
 function prevSlide() {
   resetLoadingBar();
-  //clearInterval(intervalID);
+  clearInterval(intervalID);
   slideIndex--;
   showSlide(slideIndex);
-  //intervalID = setInterval(nextSlide, 5000);
+  intervalID = setInterval(nextSlide, 5000);
 }
 
 function showSlide(index) {
