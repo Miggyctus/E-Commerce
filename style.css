@@ -165,7 +165,7 @@
 }
 
 .team-member-image{
-    width: 200px; 
+    width: 250px; 
     box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
 }
 .team-slider {
@@ -189,31 +189,20 @@
 
 .team-card h2 {
     justify-content: center;
-    font-size: 50px;
+    font-size: 45px;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 45px;
     color: #fff;
     font-family: "Poppins", sans-serif;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     margin-bottom: 10px;
-}
-.team-card .description
-{
-    width: 50%;
-    display: flex;
-    flex-direction: initial;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30%;
-    
 }
 
 .team-card p {
     font-size: 20px;
     line-height: 1.5;
     text-align: justify;
-    overflow-wrap: break-word;
     margin: 20px auto;
     max-width: 60%; /* Adjust as needed */
     color: #fff;
