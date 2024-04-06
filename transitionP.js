@@ -1,29 +1,29 @@
-var slideIndex = 0;
+var slideIndexP = 0;
 
 //var intervalID = setInterval(nextSlide, 5000);
 
-function nextSlide() {
+function nextSlideP() {
   resetLoadingBar();
   //clearInterval(intervalID);
-  slideIndex++;
-  showSlide(slideIndex);
+  slideIndexP++;
+  showSlide(slideIndexP);
   //intervalID = setInterval(nextSlide, 5000);
 }
 
-function prevSlide() {
+function prevSlideP() {
   resetLoadingBar();
   //clearInterval(intervalID);
-  slideIndex--;
-  showSlide(slideIndex);
+  slideIndexP--;
+  showSlide(slideIndexP);
   //intervalID = setInterval(nextSlide, 5000);
 }
 
-function showSlide(index) {
-  const slides = document.querySelectorAll('.team-card');
-  if (index >= slides.length) { slideIndex = 0; }
-  else if (index < 0) { slideIndex = slides.length - 1; }
-  else {slideIndex = index; }
-  slides.forEach(slide => slide.style.transform = `translateX(-${slideIndex * 100}%)`);
+function showSlideP(index) {
+  const slides = document.querySelectorAll('.team-card-picture');
+  if (index >= slides.length) { slideIndexP = 0; }
+  else if (index < 0) { slideIndexP = slides.length - 1; }
+  else {slideIndexP = index; }
+  slides.forEach(slide => slide.style.transform = `translateX(-${slideIndexP * 100}%)`);
 }
 
 function resetLoadingBar() {
@@ -36,4 +36,3 @@ function resetLoadingBar() {
   // Re-add the line element to the DOM
   document.querySelector('.loading .line_box').appendChild(line);
 }
-
