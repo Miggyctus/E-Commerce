@@ -15,7 +15,7 @@
 .banner_about_us{
     width: 100%;
     height: 100vh;
-    background-image:linear-gradient(rgba(223, 147, 132, 0.75), rgba(249, 133, 55, 0.75), rgba(223, 147, 132, 0.75)), url(background2.png);
+    background-image:linear-gradient(rgba(223, 155, 142, 0.75), rgba(249, 141, 69, 0.75), rgba(223, 155, 142, 0.75));
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; 
@@ -359,17 +359,20 @@
     color: #fff;
 }
 .content_about_us h1{
-    font-family: serif;
-    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
     justify-content: center;
 }
 .content_about_us p{
     margin: 20px auto;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 100;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: justify;
-    max-width: 60%;
+    max-width: 80%;
 }
 
 .content_contact{
@@ -469,4 +472,27 @@ tr td:first-child{
 
 tr td{
     padding-top: 20px;
+}
+
+.background_clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9)
+{
+    .background_clip{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9)
+{
+    .background_clip{
+        width: auto;
+        height: 100%;
+    }
 }
