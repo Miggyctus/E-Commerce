@@ -2,7 +2,6 @@
     <head> 
         <title>AURORA</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -33,6 +32,7 @@
         <script type="module">
               // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+            import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -50,9 +50,9 @@
   // Initialize Firebase
             const app = initializeApp(firebaseConfig);
 
-            function get_viewers_ip(jsonp)
+            function get_viewers_ip(json)
             {
-                viewers_ip = jsonp.ip;
+                viewers_ip = json.ip;
                 count_view(viewers_ip);
             }
             function count_view(viewers_ip)
