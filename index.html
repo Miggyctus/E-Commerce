@@ -2,7 +2,6 @@
     <head> 
         <title>AURORA</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="banner_home">
@@ -29,50 +28,5 @@
                 </div>
             </div>
         </div>
-        <script type="module">
-              // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-            import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-            const firebaseConfig = {
-            apiKey: "AIzaSyBbL9oJFH5c8I462mYxZnsoNgOCtfHXHVE",
-            authDomain: "viewer-count-6f3c1.firebaseapp.com",
-            databaseURL: "https://viewer-count-6f3c1-default-rtdb.firebaseio.com",
-            projectId: "viewer-count-6f3c1",
-            storageBucket: "viewer-count-6f3c1.appspot.com",
-            messagingSenderId: "181408436599",
-            appId: "1:181408436599:web:233ceb49be02218580d172"
-            };
-
-  // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-
-            function get_viewers_ip(json)
-            {
-                viewers_ip = json.ip;
-                count_view(viewers_ip);
-            }
-            function count_view(viewers_ip)
-            {
-                var views;
-                var ip_to_string = viewers_ip.toString();
-                for(var i = 0; i < ip_to_string.length; i++)
-                {
-                    ip_to_string = ip_to_string.replace(".", "-");
-                }
-                firebase.database().ref().child("page_views/" + ip_to_string).set({
-                    viewers_ip: viewers_ip
-                });
-                firebase.database().ref().child("page_views").on("value", function(snapshot){
-                    views = snapshot.numChildren();
-                    document.getElementById("view_count_text").innerHTML = "<i class='fa fa-eye'></i>" + views;
-                });
-            }
-
-          </script>
-          <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=get_viewers_ip"></script>
     </body>
 </html>
